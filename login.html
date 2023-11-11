@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #loginForm {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="loginForm">
+  <h2>Login</h2>
+  <form onsubmit="validateLogin(event)">
+    <label for="username">Username:</label>
+    <input type="text" id="username" required><br><br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" required><br><br>
+
+    <input type="submit" value="Login">
+  </form>
+</div>
+
+<script>
+  function validateLogin(event) {
+    event.preventDefault();
+
+    // Replace these values with your actual username and password
+    const expectedUsername = "test";
+    const expectedPassword = "test";
+
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+
+    if (usernameInput.value === expectedUsername && passwordInput.value === expectedPassword) {
+      // Redirect to the specified URL
+      window.location.href = "https://www5.cbox.ws/box/?boxid=947502&boxtag=uvqEHi";
+    } else {
+      alert("Invalid username or password. Please try again.");
+    }
+  }
+</script>
+
+</body>
+</html>
